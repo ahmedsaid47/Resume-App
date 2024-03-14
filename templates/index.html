@@ -3,6 +3,8 @@
 
 
 {% block home_banner_area %}
+    
+    
     <!--================Home Banner Area =================-->
     <section class="home_banner_area">
         <div class="container box_1620">
@@ -15,9 +17,9 @@
                         <div class="media-body">
                             <div class="personal_text">
                                 <h6>Hello Everybody, i am</h6>
-                                <h3>Ahmed Said Kılıç</h3>
-                                <h4>Software Developer</h4>
-                                <p>Marmara Üniversitesi Bilgisayar Mühendisliği Bölümü 3. Sınıf Öğrencisi</p>
+                                <h3>{{ home_banner_name }}</h3>
+                                <h4>{{ home_banner_title }}</h4>
+                                <p>{{ home_banner_description }}</p>
                                 <ul class="list basic_info">
                                     <li><a href="javascript:void(0)"><i class="lnr lnr-calendar-full"></i> 31st December, 1992</a></li>
                                     <li><a href="tel:+905070958316"><i class="lnr lnr-phone-handset"></i> 44 (012) 6954 783</a></li>
@@ -50,9 +52,7 @@
                 <div class="col-lg-6">
                     <div class="welcome_text">
                         <h4>About Myself</h4>
-                        <p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct
-                            standards especially in the workplace. That’s why it’s crucial that, as women, our behavior
-                            on the job is beyond reproach. inappropriate behavior is often laughed.</p>
+                        <p>{{ about_myself_welcome }}</p>
                         
                     </div>
                 </div>
