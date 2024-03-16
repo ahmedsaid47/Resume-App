@@ -21,15 +21,21 @@
                                 <h4>{{ home_banner_title }}</h4>
                                 <p>{{ home_banner_description }}</p>
                                 <ul class="list basic_info">
-                                    <li><a href="javascript:void(0)"><i class="lnr lnr-calendar-full"></i> 31st December, 1992</a></li>
-                                    <li><a href="tel:+905070958316"><i class="lnr lnr-phone-handset"></i> 44 (012) 6954 783</a></li>
-                                    <li><a href="mailto:kilicsaud1221@gmail.com"><i class="lnr lnr-envelope"></i> businessplan@donald</a></li>
-                                    <li><a href="#"><i class="lnr lnr-home"></i> Santa monica bullevard</a></li>
+                                    <li><a href="javascript:void(0)"><i class="lnr lnr-calendar-full"></i> 25th October 2002</a></li>
+                                    <li><a href="tel:+905070958316"><i class="lnr lnr-phone-handset"></i> +905070958316</a></li>
+                                    <li><a href="mailto:kilicsaud1221@gmail.com"><i class="lnr lnr-envelope"></i> kilicsaud1221@gmail.com </a></li>
+                                    <li><a href="javascript:void(0)"><i class="lnr lnr-home"></i> Istanbul, Turkey</a></li>
                                 </ul>
                                 <ul class="list personal_social">
-                                    <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+
+                                    {% for social_media in social_medias %}
+                                        
+                                        <li><a href="{{ social_media.link }}" target="_blank">{{ social_media.icon|safe }}</a></li>
+                                        
+                                    {% endfor %}
+
+
+
                                 </ul>
                             </div>
                         </div>
@@ -104,9 +110,9 @@
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <ul class="list">
-                            
-                        
-                        
+
+
+
                             {% for experience in experiences %}
                             <li>
                                 <span></span>
@@ -128,23 +134,23 @@
                             {% endfor %}
                         
                             
-                        
+
                             
                         </ul>
                     </div>
                     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                         <ul class="list">
-                            
-                            
+
+
                             {% for education in educations %}
-                            	
-                            
-                            
+
+
+
                             <li>
                                 <span></span>
                                 <div class="media">
                                     <div class="d-flex">
-                                        <p>{{ education.start_date|date:"M Y" }} - 
+                                        <p>{{ education.start_date|date:"M Y" }} -
                                             {% if education.end_date %}
                                                 {{ education.start_date|date:"M Y" }}
                                             {% else %}
@@ -158,12 +164,12 @@
                                 </div>
                             </li>
                             {% endfor %}
-                            
-                            
-                            
-                            
-                            
-                            
+
+
+
+
+
+
                         </ul>
                     </div>
                 </div>
