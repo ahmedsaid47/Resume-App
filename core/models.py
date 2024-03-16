@@ -147,4 +147,4 @@ class Experience(AbstractModel):
     class Meta:
         verbose_name = 'Experience'
         verbose_name_plural = 'Experience'
-        ordering = ('start_date',)
+        ordering = ('-start_date',)
