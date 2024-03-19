@@ -137,3 +137,8 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Email settingsÜ
+vars().update(env.email_url())
+DEFAULT_FROM_EMAIL = 'AHMED SAİD KILIÇ <kilicsaud1221@gmail.com>'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

@@ -17,6 +17,7 @@ class Message(AbstractModel):
         verbose_name='Email',
     )
     subject = models.CharField(
+        null=True,
         default='',
         max_length=254,
         blank=True,
